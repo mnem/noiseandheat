@@ -1,0 +1,15 @@
+html-template/
+bin-debug/
+bin-release/
+ 
+.settings/
+.metadata/
+.actionScriptProperties
+.flexProperties
+.flexLibProperties
+.FlexUnitSettings
+.project
+ 
+Icon
+Thumbs.db
+.DS_Store
