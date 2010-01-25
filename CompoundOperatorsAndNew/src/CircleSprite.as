@@ -6,8 +6,9 @@ package
 	{
 		public function CircleSprite()
 		{
-			graphics.beginFill(0xff0000);
-			graphics.drawCircle(0, 0, 8);
+			graphics.lineStyle(2, 0xf0f0c0, 1, true);
+			graphics.beginFill(0x8f8f8f);
+			graphics.drawCircle(0, 0, 7);
 			graphics.endFill();
 		}
 	}
