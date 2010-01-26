@@ -21,8 +21,6 @@ package
 		public function newChild() :void
 		{
 			addChild(new CircleSprite()).x += 40;
-			
-			trace("And, lo, one became two.");
 		}
 		
 		public function newMrNoisy() :void
