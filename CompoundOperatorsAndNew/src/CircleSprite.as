@@ -1,9 +1,12 @@
 package
 {
 	import flash.display.Sprite;
+	import flash.events.Event;
 	import flash.text.TextField;
 	import flash.text.TextFormat;
 	import flash.text.TextFormatAlign;
+	
+	import noiseandheat.Log;
 	
 	public class CircleSprite extends Sprite
 	{
@@ -41,6 +44,31 @@ package
 			text.y = -text.height / 2;
 			
 			addChild(text);
+			
+			addEventListener(Event.ADDED_TO_STAGE, addedToStage);
+			Log.instance.writeln(this + " constructed");
+		}
+		
+		public override function toString() :String
+		{
+			return "[CircleSprite " + instanceID + "]";
+		}
+		
+		private function addedToStage(event :Event) :void
+		{
+			Log.instance.writeln(this + " added to stage. parent: " + this.parent);
+		}
+		
+		public override function get x() :Number
+		{
+			Log.instance.writeln(this + " having x read. x: " + super.x);
+			return super.x;		
+		}
+		
+		public override function set x(value :Number) :void
+		{
+			Log.instance.writeln(this + " having x set to " + value);
+			super.x = value;		
 		}
 	}
 }

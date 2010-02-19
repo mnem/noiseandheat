@@ -1,0 +1,19 @@
+<languageVersion : 1.0;>
+
+kernel NewFilter
+<   namespace : "mathops";
+    vendor : "noiseandheat.com";
+    version : 1;
+    description : "Calculates the inverse square root for a series of floats.";
+>
+{
+    input image1 src;
+    output pixel3 result;
+
+    void
+    evaluatePixel()
+    {
+        pixel1 isqrt = inverseSqrt(sample(src,outCoord()));
+        result = pixel3(isqrt, 0.0, 0.0);
+    }
+}
